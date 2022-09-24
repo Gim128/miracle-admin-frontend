@@ -1,0 +1,121 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card card-plain">
+      <div class="card-header">
+        <h4 class="card-title">Add New Product</h4>
+      </div>
+      <div class="card-body">
+
+        <form [formGroup]="productForm">
+          <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group required">
+                  <label for="title">Product Title</label>
+                  <input type="text" class="form-control" id="title" formControlName="itemName" required>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="description">Description</label>
+                  <textarea class="form-control textarea" formControlName="description" id="description"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="quantity">Quantity</label>
+                  <input type="text" class="form-control" id="quantity" formControlName="qty">
+                </div>
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-md-12" style="border: 1px solid black;border-radius: 10px;margin: 15px;padding: 15px">
+                <div class="row mt-2 ">
+                  <div class="col-md-8 offset-2 image-upload" style="border-bottom: 1px solid black">
+                    <input class="form-control" type="file" id="file-input"
+                           (change)="onChange($event)">
+                    <label for="file-input">
+                      <i style="font-size: 50px" class="nc-icon nc-cloud-upload-94"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-md-12">
+                    Drag & Drop files here to upload
+                  </div>
+                </div>
+
+                <div class="container" *ngIf="loading">
+                  <h6>Loading ...</h6>
+                </div>
+
+                <div class="row mt-2">
+                  <div class="col-md-12">
+                    <button (click)="onUpload()" class="btn btn-primary btn-round">Upload</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row text-right">
+              <div class="col-md-12">
+                <button type="button" (click)="onSubmit(productForm)" class="btn btn-primary btn-round btn-sm">Save & Publish</button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-md-6 pl-5">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label for="price">Price</label>
+                  <input type="text" class="form-control" id="price" formControlName="sellingPrice">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="price">Product Category</label>
+                  <select class="browser-default custom-select">
+                    <option selected>Select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="price">Brands</label>
+                  <select class="browser-default custom-select">
+                    <option selected>Select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="tags">Tags</label>
+                  <input type="text" class="form-control" id="tags" formControlName="tags">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

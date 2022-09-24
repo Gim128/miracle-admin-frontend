@@ -1,0 +1,34 @@
+
+<div class="sidebar-wrapper">
+  <div class="logo">
+    <a routerLink="/" class="simple-text logo-mini">
+      <div class="logo-image-small">
+        <img src="assets/images/logo.png">
+      </div>
+    </a>
+  </div>
+
+
+    <ul class="nav">
+        <li *ngFor="let menuItem of menuItems; let i=index" (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}" routerLinkActive="active" class="{{menuItem.class}}">
+            <a *ngIf="menuItem.child && menuItem.child.length == 0" [routerLink]="[menuItem.path]">
+                <i class="nc-icon {{menuItem.icon}}"></i>
+              <p class="justify-content-between"><span>{{menuItem.title}}</span>
+            </a>
+            <a *ngIf="menuItem.child && menuItem.child.length > 0">
+              <i class="nc-icon {{menuItem.icon}}"></i>
+              <p class="justify-content-between"><span>{{menuItem.title}}</span>
+                <i style="position: absolute;right: -15px;" [ngClass]="isGroupShown(i) ? 'nc-icon nc-minimal-up' : 'nc-icon nc-minimal-down'" class="down-icon"></i> </p>
+            </a>
+          <div *ngIf="isGroupShown(i)" class="ml-5">
+            <div *ngFor="let subMenu of menuItem.child">
+              <div style="color: white;" [routerLink]="[subMenu.path]">
+                <div><!--<i class="nc-icon {{subMenu.icon}}"></i>--> <span>{{subMenu['title']}}</span></div><!--<br>-->
+              </div>
+            </div>
+          </div>
+        </li>
+    </ul>
+
+
+</div>

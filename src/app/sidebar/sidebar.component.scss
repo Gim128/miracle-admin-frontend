@@ -1,0 +1,17 @@
+.sidebar-wrapper {
+  // background: linear-gradient(180deg, #C9219D 0%, #69006C 50%, #11001F 100%) !important;
+  background: #C962B3 !important;
+  a {
+    color: white !important;
+  }
+}
+
+.nav li > a, .off-canvas-sidebar .nav li > a {
+  opacity: 0.8;
+}
+
+.down-icon {
+  font-size: 15px !important;
+  color: white !important;
+  align-items: end;
+}

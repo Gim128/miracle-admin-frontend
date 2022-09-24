@@ -1,0 +1,12 @@
+{
+  "SERVER": {
+    "PORT": 3001
+  },
+  "DEFAULT_LANGUAGE": "en",
+  "LANGUAGE": null,
+  "ORIGIN": "http://localhost:3001",
+  "API_URL": {
+    "PUBLIC" : "http://localhost/online-shop",
+    "PRIVATE" : "http://localhost:8055/online-shop"
+  }
+}

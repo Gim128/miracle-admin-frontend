@@ -1,0 +1,142 @@
+
+
+<div class="container-fluid">
+  <div class="mt-5">
+    <h5>Create New User</h5>
+  </div>
+
+  <div>
+
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group required">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control " id="firstName" formControlName="name" required>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group required">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" formControlName="contact" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group required">
+          <label for="email">Address Line 1</label>
+          <input type="text" class="form-control " id="email" formControlName="name" required>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group required">
+          <label for="userName">Address Line 2</label>
+          <input type="text" class="form-control " id="userName" formControlName="name" required>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group required">
+          <label for="password">City</label>
+          <input type="text" class="form-control " id="password" formControlName="name" required>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group required">
+          <label for="email">Contact No(primary)</label>
+          <input type="text" class="form-control " id="email" formControlName="name" required>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group required">
+          <label for="userName">Contact No(Other)</label>
+          <input type="text" class="form-control " id="userName" formControlName="name" required>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group required">
+          <label for="email">Email</label>
+          <input type="text" class="form-control " id="email" formControlName="name" required>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group required">
+          <label for="userName">Birthday</label>
+          <input type="text" class="form-control " id="userName" formControlName="name" required>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group required">
+          <label for="email">Deparment</label>
+          <input type="text" class="form-control " id="email" formControlName="name" required>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group required">
+          <label for="userName">Role</label>
+          <input type="text" class="form-control " id="userName" formControlName="name" required>
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+    </div>
+
+    <h6 class="mt-5">Profile Picture</h6>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="assets/images/profile.png">
+      </div>
+      <div class="col-md-6 text-right">
+        <div class="row mt-5">
+          <div class="update ml-auto mr-auto">
+            <button class="btn btn-purple btn-round">Edit</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="update ml-auto mr-auto">
+            <button class="btn btn-primary btn-round">Create New</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  </form>
+
+
+
+
+
+</div>
+
+
+
+</div>
